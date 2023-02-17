@@ -1,5 +1,4 @@
 -- modifiable variables
-local reactor_side = "top"
 local input_fluxgate_name = ""
 local output_fluxgate_name = ""
 
@@ -37,7 +36,7 @@ local emergencyTemp = false
 monitor = f.periphSearch("monitor")
 input_fluxgate = peripheral.wrap(input_fluxgate_name)
 output_fluxgate = peripheral.wrap(output_fluxgate_name)
-reactor = peripheral.wrap(reactor_side)
+reactor = f.periphSearch("reactor")
 
 if monitor == null then
 	error("No valid monitor was found.")
